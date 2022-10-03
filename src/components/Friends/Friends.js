@@ -10,8 +10,8 @@ const Friends =() =>{
             <h2>I am Friends{friends.length}</h2>
             {
                friends.map(friend => <Friend
-               key={friend.id}>
-                friend={friend}
+               key={friend.id}
+                friend={friend}>
                </Friend>)
                  
             }

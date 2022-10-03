@@ -12,7 +12,7 @@ const Header = () =>{
            <Link to = '/product'>Product</Link>
 
 </nav>
-           <h3>Common Header</h3>
+           <h3>I am Common Header</h3>
         </div>
     )
 
