@@ -15,4 +15,4 @@ const Friend =({friend}) => {
        </div>
     )
 }
-export default Friend;
+export default Friend; 

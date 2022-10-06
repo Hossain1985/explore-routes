@@ -6,6 +6,7 @@ import About from './components/About/About';
 import Product from './components/Product/Product';
 import Main from './Layout/Main';
 import Friends from './components/Friends/Friends';
+import FriendDetails from './components/FriendDetails/FriendDetails';
 
 
 
@@ -23,6 +24,14 @@ function App() {
         return fetch('https://jsonplaceholder.typicode.com/users')
       },
        element :<Friends/>},
+       {
+        path:'/friend/:friendid',
+        loader: async ({params}) => {
+          // console.log(params.friendId)
+          return fetch (`https://jsonplaceholder.typicode.com/users/${params.friendid}`)
+        },
+        element: <FriendDetails></FriendDetails>
+       }
       
     ]},
     {path: '/about' , element: <About></About>},
@@ -31,7 +40,7 @@ function App() {
   ])
   return (
     <div className="App">
-      <RouterProvider router={router} > </RouterProvider>
+      <RouterProvider router={router}></RouterProvider>
      
     </div>
   );
